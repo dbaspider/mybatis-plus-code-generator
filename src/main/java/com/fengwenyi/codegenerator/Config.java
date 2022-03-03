@@ -10,34 +10,34 @@ public class Config {
     public static final String PACKAGE_NAME_CONTROLLER = "controller";
 
     /** 包名：service */
-    public static final String PACKAGE_NAME_SERVICE = "repository";
+    public static final String PACKAGE_NAME_SERVICE = "service";
 
     /** 包名：service.impl */
-    public static final String PACKAGE_NAME_SERVICE_IMPL = "repository.impl";
+    public static final String PACKAGE_NAME_SERVICE_IMPL = "service.impl";
 
     /** 包名：model */
     public static final String PACKAGE_NAME_MODEL = "entity";
 
     /** 包名：dao */
-    public static final String PACKAGE_NAME_DAO = "dao";
+    public static final String PACKAGE_NAME_DAO = "mapper";
 
     /** 目录名：xml */
     public static final String DIR_NAME_XML = "mapper";
 
     /** 文件名后缀：Model */
-    public static final String FILE_NAME_MODEL = "%sEntity";
+    public static final String FILE_NAME_MODEL = "%s";
 
     /** 文件名后缀：Dao */
-    public static final String FILE_NAME_DAO = "I%sDao";
+    public static final String FILE_NAME_DAO = "%sMapper";
 
     /** 文件名后缀：Mapper */
     public static final String FILE_NAME_XML = "%sMapper";
 
     /** MP开头，Service结尾 */
-    public static final String FILE_NAME_SERVICE = "MP%sRepository";
+    public static final String FILE_NAME_SERVICE = "I%sService";
 
     /** 文件名后缀：ServiceImpl */
-    public static final String FILE_NAME_SERVICE_IMPL = "%sRepositoryImpl";
+    public static final String FILE_NAME_SERVICE_IMPL = "%sServiceImpl";
 
     /** 文件名后缀：Controller */
     public static final String FILE_NAME_CONTROLLER = "%sController";
@@ -62,6 +62,6 @@ public class Config {
     public static final String TEMPLATE_ENGINE = "velocity";
 
     /** 是否支持Swagger，默认不支持 */
-    public static final Boolean SWAGGER_SUPPORT = false;
+    public static final Boolean SWAGGER_SUPPORT = true;
 
 }

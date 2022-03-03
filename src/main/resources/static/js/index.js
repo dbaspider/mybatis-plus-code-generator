@@ -25,6 +25,12 @@ layui.use(function() {
     jQuery("#dbPassword").val(dbPassword);
     jQuery("#outputDir").val(outputDir);
 
+    console.log("--- extra init begin here ---");
+    //jQuery("#swaggerSupport").prop("checked", true);
+    //jQuery("#fieldAnnotation").prop("checked", true);
+    //jQuery("#baseResultMap").prop("checked", true);
+    //jQuery("#baseColumnList").prop("checked", true);
+    console.log("--- extra init end here ---");
 
     //监听提交
     form.on('submit(formCodeGenerator)', function(data){
@@ -37,12 +43,13 @@ layui.use(function() {
         let url = "/code-generator";
         let param = JSON.stringify(data.field);
         ajaxPost(jQuery, layer, url, param, function (response) {
+            console.info(response);
             if (response.success) {
                 handleCache(data.field);
-                alertSuccess(layer, response.msg);
+                alertSuccess(layer, "恭喜你，生成操作成功！");
             } else {
                 layer.alert(response.msg,{ icon: 5 });//失败的表情
-                alertFail(layer, response.msg);
+                alertFail(layer, "生成操作失败，请检查！");
             }
         });
     }
